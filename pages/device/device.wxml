@@ -1,0 +1,76 @@
+<view class="login" bind:tap="jumpToLogin">
+	<image src="/images/center/login.png" class="login-img" />
+	<view class="login-title">登陆云瞻</view>
+	<view class="login-subtitle">支持账号密码登陆</view>
+</view>
+
+<view class="demo-title">
+	<text >设备实时监控Demo</text>
+	<image class="demo-title-info" src="/images/device/info.png" bind:tap="showInfo" />
+</view>
+
+<view class="demo-list" wx:for="{{demos}}" wx:key="index">
+	<view class="demo-item">
+		<view class="demo-item-title">
+			<image class="demo-item-title-img" src="/images/device/device.png" />
+			<view class="demo-item-title-content">
+				<text class="demo-item-dsc">{{item.title}}</text>
+				<text class="demo-item-address">所在分支：{{item.address}}</text>
+				<view class="demo-item-index">{{index+1}}</view>
+			</view>
+		</view>
+		<view class="demo-content">
+			<view class="demo-content-item">
+				<view class="demo-content-item-name">带宽利用率</view>
+				<progress
+				 class="demo-content-item-progress"
+				 percent="{{item.broadband}}"
+				 color="#1672dd"
+				 border-radius="5"
+				 active
+				/>
+				<view class="demo-content-item-dsc">{{item.broadband}}</view>
+			</view>
+			<view class="demo-content-item">
+				<view class="demo-content-item-name">CPU利用率</view>
+				<progress
+				 class="demo-content-item-progress"
+				 percent="{{item.cpu}}"
+				 color="#1672dd"
+				 border-radius="5"
+				 active
+				/>
+				<view class="demo-content-item-dsc">{{item.cpu}}</view>
+			</view>
+			<view class="demo-content-item">
+				<view class="demo-content-item-name">内存利用率</view>
+				<progress
+				 class="demo-content-item-progress"
+				 percent="{{item.ram}}"
+				 color="#1672dd"
+				 border-radius="5"
+				 active
+				/>
+				<view class="demo-content-item-dsc">{{item.ram}}</view>
+			</view>
+			<view class="demo-content-item">
+				<view class="demo-content-item-name">磁盘利用率</view>
+				<progress
+				 class="demo-content-item-progress"
+				 percent="{{item.disc}}"
+				 color="#1672dd"
+				 border-radius="5"
+				 active
+				/>
+				<view class="demo-content-item-dsc">{{item.disc}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="bottom">
+	<button class="bottom-btn" type="primary" bindtap="onTrial">
+		立即申请免费试用
+	</button>
+</view>
+

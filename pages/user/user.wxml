@@ -1,0 +1,31 @@
+<view class="login" bind:tap="jumpToLogin">
+	<image src="{{avatarUrl}}" class="login-img" />
+	<view class="login-title">登陆云瞻</view>
+	<view class="login-subtitle">支持账号密码登陆</view>
+</view>
+
+<view class="options">
+	<view class="option-item">
+		<view class="option-item-title">了解云瞻</view>
+		<image class="option-item-img" src="/images/user/arrow_right.png" />
+	</view>
+	<view class="option-item" bind:tap="makeCall">
+		<view class="option-item-title">联系客服</view>
+		<view class="option-item-tel">400-806-6868</view>
+		<image class="option-item-img" src="/images/user/arrow_right.png" />
+	</view>
+	<view
+	 wx:if="{{canIUseGetUserProfile}}"
+	 class="option-item"
+	 bind:tap="getUserInfo"
+	 open-type="getUserInfo"
+	>
+		<view class="option-item-title">点击自动登录</view>
+		<image class="option-item-img" src="/images/user/arrow_right.png" />
+	</view>
+	<view class="option-item" bind:tap="getInfo" open-type="getUserInfo">
+		<view class="option-item-title">点击获取用户信息</view>
+		<image class="option-item-img" src="/images/user/arrow_right.png" />
+	</view>
+</view>
+

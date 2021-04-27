@@ -1,0 +1,25 @@
+<view class="login" bind:tap="jumpToLogin">
+	<image src="/images/center/login.png" class="login-img" />
+	<view class="login-title">登陆云瞻</view>
+	<view class="login-subtitle">支持账号密码登陆</view>
+</view>
+
+<view class="demo-title">待处置事件概览Demo</view>
+<view class="demo-list" wx:for="{{demos}}" wx:key="index">
+	<view class="demo-item">
+		<image class="demo-item-img" src="{{item.imageUrl}}" />
+		<view class="demo-item-content">
+			<text class="demo-item-title">{{item.title}} ({{item.num}})</text>
+			<text class="demo-item-asset">影响资产：{{item.assets}}</text>
+		</view>
+		<image class="demo-arrow-left" src="/images/center/arrow_right.png" />
+	</view>
+</view>
+
+<view class="bottom">
+	<text class="bottom-dsc">
+        可登录web端云瞻ti.hillstonenet.com.cn查看更多
+    </text>
+	<text class="bottom-num" bind:tap="makeCall">400-828-6655</text>
+</view>
+

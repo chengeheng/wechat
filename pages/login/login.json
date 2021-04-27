@@ -1,0 +1,8 @@
+{
+	"navigationBarTitleText": "",
+	"usingComponents": {
+		"my-form": "/miniprogram_npm/weui-miniprogram/form/form",
+		"my-checkbox": "/miniprogram_npm/weui-miniprogram/checkbox/checkbox",
+		"my-checkbox-group": "/miniprogram_npm/weui-miniprogram/checkbox-group/checkbox-group"
+	}
+}

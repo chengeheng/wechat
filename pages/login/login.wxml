@@ -1,0 +1,53 @@
+<view class="login">
+	<image src="/images/center/login.png" class="login-img" />
+	<view class="login-title">登陆云瞻</view>
+	<view class="login-subtitle">支持账号密码登陆</view>
+</view>
+
+<view class="login-form">
+	<my-form id="form" catchsubmit="submitLogin">
+		<view class="login-form-item">
+			<input
+			 class="login-input"
+			 name="username"
+			 value="{{username}}"
+			 placeholder="请输入您的云瞻账号"
+			 bindinput="usernameChange"
+			/>
+		</view>
+		<view class="login-form-item">
+			<input
+			 class="login-input"
+			 name="password"
+			 value="{{password}}"
+			 placeholder="请输入密码"
+			 password
+			 bindinput="passwordChange"
+			/>
+		</view>
+		<view class="login-form-item-no-border">
+			<my-checkbox
+			 ext-class="my-raido"
+			 label=""
+			 checked="{{protocol}}"
+			 bindchange="protocolChange"
+			/>
+			<text class="login-form-radio" >我已阅读并同意</text>
+			<text class="login-protocol">《山石网科云瞻协议》</text>
+		</view>
+		<button
+		 class="form-btn"
+		 disabled="{{submitDisable}}"
+		 form-type="submit"
+		 type="primary"
+		 bind:tap="submitLogin"
+		>登录
+		</button>
+	</my-form>
+</view>
+
+<view class="bottom">
+	联系客服
+	<text class="bottom-tel" bind:tap="makeCall">400-806-6868</text>
+</view>
+

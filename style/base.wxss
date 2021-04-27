@@ -1,0 +1,22 @@
+page {
+	--themeColor: #ff5033;
+
+	--gray-10: #fff;
+	--gray-20: #fafafa;
+	--gray-30: #f3f3f3;
+	--gray-50: #e8e8e8;
+	--gray-60: #ccc;
+	--gray-70: #b0b0b0;
+	--gray-80: #999;
+	--gray-90: #666;
+	--gray-100: #333;
+
+	--blue-10: #f0f7ff;
+	--blue-20: #e5f1ff;
+	--blue-30: #92bff3;
+	--blue-40: #408ee9;
+	--blue-50: #1672dd;
+	--blue-60: #115bb0;
+	--blue-80: #0d4484;
+	--blue-90: #082d58;
+}
